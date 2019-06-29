@@ -1,6 +1,3 @@
-// dear imgui: standalone example application for DirectX 9
-// If you are new to dear imgui, see examples/README.txt and documentation at the top of imgui.cpp.
-
 #include "Header.h"
 #include "Draw/d3d9_draw.h"
 
