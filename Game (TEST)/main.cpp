@@ -7,7 +7,6 @@
 // Data
 static LPDIRECT3D9              g_pD3D = NULL;
 static LPDIRECT3DDEVICE9        g_pd3dDevice = NULL;
-static LPD3DXFONT				TEXT_FONT = NULL;
 static D3DPRESENT_PARAMETERS    g_d3dpp = {};
 RECT							rc = {0, 0};
 ULONGLONG						timescale = GetTickCount64();
@@ -121,7 +120,6 @@ bool CreateDeviceD3D(HWND hWnd)
 	//g_d3dpp.PresentationInterval = D3DPRESENT_INTERVAL_IMMEDIATE;   // Present without vsync, maximum unthrottled framerate
 	if (g_pD3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, D3DCREATE_HARDWARE_VERTEXPROCESSING, &g_d3dpp, &g_pd3dDevice) < 0)
 		return false;
-	D3DXCreateFontA(g_pd3dDevice, 16, 5, FW_NORMAL, 1, 0, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH | FF_DONTCARE, "Tahoma", &TEXT_FONT);
 
 	return true;
 }
@@ -301,7 +299,6 @@ void CleanupDeviceD3D()
 	delete player;
 	if (g_pd3dDevice) { g_pd3dDevice->Release(); g_pd3dDevice = NULL; }
 	if (g_pD3D) { g_pD3D->Release(); g_pD3D = NULL; }
-	if (TEXT_FONT) { TEXT_FONT->Release(); TEXT_FONT = NULL; }
 }
 
 // Win32 message handler
