@@ -8,10 +8,10 @@
 static LPDIRECT3D9              g_pD3D = NULL;
 static LPDIRECT3DDEVICE9        g_pd3dDevice = NULL;
 static D3DPRESENT_PARAMETERS    g_d3dpp = {};
-RECT							rc = {0, 0};
-ULONGLONG						timescale = GetTickCount64();
-bool							keys[MAX_PATH] = {}, gameOver{ false };
-GameSprite						*player;
+RECT				rc = {0, 0};
+ULONGLONG			timescale = GetTickCount64();
+bool				keys[MAX_PATH] = {}, gameOver{ false };
+GameSprite			*player;
 
 // Forward declarations of helper functions
 bool CreateDeviceD3D(HWND hWnd), Render(HWND hWnd);
