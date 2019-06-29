@@ -141,29 +141,21 @@ void Move()
 		switch (snake.side)
 		{
 		case 1:
-		{
 			snake.pos[0].y -= 1;
 			snake.tail = 3;
-		}
-		break;
+			break;
 		case 2:
-		{
 			snake.pos[0].x -= 1;
 			snake.tail = 4;
-		}
-		break;
+			break;
 		case 3:
-		{
 			snake.pos[0].y += 1;
 			snake.tail = 1;
-		}
-		break;
+			break;
 		case 4:
-		{
 			snake.pos[0].x += 1;
 			snake.tail = 2;
-		}
-		break;
+			break;
 		}
 
 		for (int i = 1; i < snake.length; i++)
@@ -171,21 +163,13 @@ void Move()
 			prev = prev2;
 			prev2 = snake.pos[i];
 			if (snake.pos[i].x < prev.x)
-			{
 				snake.pos[i].x += 1;
-			}
 			else if (snake.pos[i].x > prev.x)
-			{
 				snake.pos[i].x -= 1;
-			}
 			else if (snake.pos[i].y < prev.y)
-			{
 				snake.pos[i].y += 1;
-			}
 			else if (snake.pos[i].y > prev.y)
-			{
 				snake.pos[i].y -= 1;
-			}
 		}
 
 		timescale = GetTickCount64();
