@@ -14,10 +14,10 @@ bool                            keys[MAX_PATH] = {}, gameOver{ false };
 GameSprite                      *player;
 
 // Forward declarations of helper functions
-bool CreateDeviceD3D(HWND hWnd), Render(HWND hWnd);
-int rand(int min, int max);
-void Move(), GameScripts(), CleanupDeviceD3D(), Restart();
-LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+bool                            CreateDeviceD3D(HWND hWnd), Render(HWND hWnd);
+int                             rand(int min, int max);
+void                            Move(), GameScripts(), CleanupDeviceD3D(), Restart();
+LRESULT                         WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 struct Snake {
 	Vector2D pos[MAX_PATH];
