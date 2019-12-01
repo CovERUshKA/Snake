@@ -1,5 +1,5 @@
 # Snake
-This is my first game written in С++. DirectX
+This is my first game written in С++. DirectX 9
 
 ## Requirements:
 1) Download DirectX Software Development Kit (June 2010).
