@@ -6,5 +6,4 @@ This is my first game written in С++. DirectX 9
 Link to download - https://www.microsoft.com/en-us/download/details.aspx?id=6812
 
 ## View
-
-!["View"](https://cdn.discordapp.com/attachments/498189410970501151/598055962212958210/unknown.png)
+![View](https://github.com/user-attachments/assets/b214339f-c9cd-4c76-b664-aa277eff9f44)
